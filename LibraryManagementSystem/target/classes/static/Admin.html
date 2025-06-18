@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="Admin.css">
+</head>
+<body>
+  <nav>
+    <div class="admin-name">Admin</div>
+    <ul>
+      <li><a href="#" onclick="showSection('add-book')">Add Book</a></li>
+      <li>
+        <a href="#">Track</a>
+        <div class="dropdown">
+          <a href="#" onclick="toggleTrackSection('students')">Students</a>
+          <a href="#" onclick="showSection('track-books')">Books</a>
+        </div>
+      </li>
+      <li><a href="#" onclick="showSection('fines')">Fines</a></li>
+      <li><a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="section" id="add-book">
+    <h2>Add Book</h2>
+    <div class="form-group">
+      <label class="bind-dynamic">Book ID:</label>
+      <input type="text" />
+    </div>
+    <div class="form-group">
+      <label class="bind-dynamic">Book Name:</label>
+      <input type="text" />
+    </div>
+    <div class="form-group">
+      <label class="bind-dynamic">Author Name:</label>
+      <input type="text" />
+    </div>
+    <div class="form-group">
+      <label class="bind-dynamic">Upload Book Image:</label>
+      <input type="file" />
+    </div>
+    <button>Add Book</button>
+  </div>
+
+  <div class="section" id="track-students">
+    <h2>Track Students</h2>
+    <button onclick="toggleStudentSection('table')" class="t-button">View Student Table</button>
+    <button onclick="toggleStudentSection('approve')" class="t-button">Approve Book</button>
+
+    <div id="student-table" class="glass-table" style="display: none;">
+      <h3>Student Info Table</h3>
+      <p class="bind-dynamic">Example: Student ID, Name, Book ID, Days Available</p>
+    </div>
+
+    <div id="approve-form" class="approve-form">
+      <h3>Approve Book Request</h3>
+      <div class="form-group">
+        <label class="bind-dynamic">Student ID:</label>
+        <input type="text" />
+      </div>
+      <div class="form-group">
+        <label class="bind-dynamic">Student Name:</label>
+        <input type="text" />
+      </div>
+      <div class="form-group">
+        <label class="bind-dynamic">Book ID:</label>
+        <input type="text" />
+      </div>
+      <div class="form-group">
+        <label class="bind-dynamic">Days Required:</label>
+        <input type="number" />
+      </div>
+      <button>Approve Book</button>
+    </div>
+  </div>
+
+  <div class="section" id="track-books">
+    <h2>Track Books</h2>
+    <div class="book-card">
+      <p><strong>Book Name:</strong> Example</p>
+      <br>
+      <p><strong>Author:</strong> John Doe</p>
+      <br>
+      <p><strong>Status:</strong> <span class="status available">Available</span></p>
+      <button onclick="changeStatus(this, 'available')" class="ab">Available</button>
+      <button onclick="changeStatus(this, 'not-available')" class="nab">Not Available</button>
+    </div>
+  </div>
+
+  <div class="section" id="fines">
+    <h2>Fines</h2>
+    <div class="glass-table">
+      <p class="ovl">Overdue List:</p>
+      <p class="bind-dynamic">Example: Student ID, Book ID, Due Date, Days Overdue, Fine ₹10/day</p>
+      <button>Mark as Returned</button>
+    </div>
+  </div>
+  <script src="Admin.js"></script>
+</body>
+</html>

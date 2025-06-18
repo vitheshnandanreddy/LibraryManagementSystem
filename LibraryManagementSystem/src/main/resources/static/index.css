@@ -1,0 +1,107 @@
+body {
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),  /* transparent overlay */
+    url('images/lmsbg.jpg');
+    background-size: cover;
+    height: 71vh;
+    background-position: center;
+    margin: 0;
+}
+
+.container {
+  margin-top: 170px;
+  margin-left: 520px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  width: 350px;
+  color: #fff;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  margin-left: -8px;
+  padding: 15px 10px 10px 10px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.input-group .eye {
+  left: auto;
+  right: 10px;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: white;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  margin-bottom: 25px;
+  margin-left: 245px;
+}
+
+.options label input {
+  margin-right: 5px;
+}
+
+.options a {
+  color: #f0f0f0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-btn {
+	background-color: transparent;
+	text-decoration: underline;
+	color: white;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: #4caf50;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.switch {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #fff;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+

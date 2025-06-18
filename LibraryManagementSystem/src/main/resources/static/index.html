@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Library Management System</title>
+</head>
+<body>
+    <div class="container">
+
+    <!-- Sign In Form -->
+    <div id="signin">
+      <h2>Sign In</h2>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="loginIdentifier" placeholder="Email or Phone">
+      </div>
+<div class="input-group">
+  <i class="fas fa-lock"></i>
+  <input type="password" id="signinPass" placeholder="Password">
+  <i class="fas fa-eye eye" onclick="togglePassword('signinPass', this)"></i>
+</div>
+      <div class="options">
+        <a href="forgot.html" class="link-btn" onclick="handleForgotPassword()" >Forgot Password?</a>
+      </div>
+      <button class="btn" onclick="loginUser()">Submit</button>
+      <div class="switch" onclick="switchForm()">Don't have an account? Register</div>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div id="signup" class="hidden">
+      <h2>Sign Up</h2>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="name" placeholder="Full Name">
+      </div>
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="email" placeholder="Email">
+      </div>
+      <div class="input-group">
+        <i class="fas fa-phone"></i>
+        <input type="text" id="phone" placeholder="Phone">
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="signupPass" placeholder="Password">
+        <i class="fas fa-eye eye" onclick="togglePassword('signupPass')"></i>
+      </div>
+      <button class="btn" onclick="registerUser()">Register</button>
+      <div class="switch" onclick="switchForm()">Already have an account? Sign In</div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
