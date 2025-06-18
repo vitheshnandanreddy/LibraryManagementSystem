@@ -45,7 +45,7 @@ https://github.com/user-attachments/assets/518a5201-1ab7-4088-a072-48c4174ba612
 ![Screenshot 2025-06-18 212804](https://github.com/user-attachments/assets/8c7073c9-30ca-4e66-ad45-54b9bd1359a3)
 
 
-***Password Reset Page**
+**Password Reset Page**
 
 ![Screenshot 2025-06-18 212820](https://github.com/user-attachments/assets/a04d285b-cbcd-4e94-a49d-6c4ef1abc6d4)
 
